@@ -84,16 +84,7 @@ public class Driver {
         return  " - (" + this.getName() + " " + this.getPrezime() + " ( " + this.getJMB() + " ))";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Driver)) return false;
-        Driver driver = (Driver) o;
-        return Objects.equals(getJMB(), driver.getJMB());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getJMB());
+    public boolean equals(Driver d) {
+        return (d.getJMB().equals(this.getJMB()));
     }
 }

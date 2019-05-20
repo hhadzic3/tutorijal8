@@ -1,7 +1,7 @@
 package ba.unsa.etf.rs.tutorijal8;
 
 public class Bus {
-    private int id;
+    private Integer id = null;
     private String proizvodjac;
     private String serija;
     private int numberOfSeats;
@@ -91,17 +91,24 @@ public class Bus {
     }
 
     @Override
-    public String toString() {
-        String ispisBusa = "";
-        ispisBusa += this.proizvodjac + " " + this.serija + " ( seats: " + this.getSeatNumber() + " )";
+    public String toString () {
+        String s = "";
+        s += this.proizvodjac + " " + this.serija + " ( seats: " + this.getSeatNumber() + " )";
         if (FirstDriver != null) {
-            ispisBusa += FirstDriver.toString();
+            s += FirstDriver.toString();
         }
         if (SecondDriver != null) {
-            ispisBusa += SecondDriver.toString();
+            s += SecondDriver.toString();
         }
-        return ispisBusa;
+        return s;
     }
+    /*public boolean equals(Bus bus) {
+        if (id != null) {
+            return (bus.getId().equals(this.getId()));
+        }
+        return false;
+    }*/
+
 }
 
 
