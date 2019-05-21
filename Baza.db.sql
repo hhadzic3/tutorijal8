@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS "Vozac" (
 	"vozac_id"	INTEGER,
 	"ime"	TEXT,
 	"prezime"	TEXT,
-	"JMB"	TEXT,
+	"JMB"	TEXT UNIQUE ,
 	"datum_rodjenja"	DATE,
 	"datum_zaposljenja"	DATE,
 	PRIMARY KEY("vozac_id")

@@ -4,10 +4,9 @@
     <list default="true" id="421d7fb7-fab3-48c2-b140-ac993b300cb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/Baza.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Bus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,6 +47,20 @@
         <item name="Baza" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="Bus: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Baza" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="Vozac: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Baza" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
         <item name="VozaciBuseva: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
@@ -62,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="69">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-593">
-              <caret line="58" column="96" selection-start-line="58" selection-start-column="96" selection-end-line="58" selection-end-column="96" />
+            <state relative-caret-position="69">
+              <caret line="224" selection-start-line="224" selection-end-line="224" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="69">
+              <caret line="93" selection-start-line="93" selection-end-line="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,15 +108,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Baza.db.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+            <state relative-caret-position="1197">
+              <caret line="83" column="98" selection-start-line="83" selection-start-column="98" selection-end-line="83" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1840#1841#0" expanded="true" />
-                <element signature="e#1897#1898#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,14 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Bus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="1596">
               <caret line="104" column="6" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
-              <folding>
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,12 +159,12 @@
         <option value="$PROJECT_DIR$/Tutorijal_8.iml" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/PripremaTest.java" />
         <option value="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak1Test.java" />
-        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java" />
         <option value="$PROJECT_DIR$/Baza.db.sql" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Bus.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java" />
+        <option value="$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java" />
       </list>
     </option>
   </component>
@@ -172,7 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -207,6 +220,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,7 +231,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558337168757" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558440464958" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -250,13 +264,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Zadatak2Test">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rs.tutorijal8.Main" />
+  <component name="RunManager" selected="JUnit.All in Tutorijal_8">
+    <configuration name="All in Tutorijal_8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tutorijal_8" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\HARUN\Documents\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -276,22 +288,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PripremaTest.otpustanjeVozaca" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tutorijal_8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rs.tutorijal8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rs.tutorijal8" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rs.tutorijal8.PripremaTest" />
-      <option name="METHOD_NAME" value="otpustanjeVozaca" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Zadatak1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tutorijal_8" />
       <extension name="coverage">
@@ -303,6 +299,24 @@
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rs.tutorijal8" />
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rs.tutorijal8.Zadatak1Test" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zadatak2Test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tutorijal_8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rs.tutorijal8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rs.tutorijal8" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rs.tutorijal8.Zadatak2Test" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:ba.unsa.etf.rs.tutorijal8.Zadatak2Test]" />
+      </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -324,11 +338,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Tutorijal_8" />
         <item itemvalue="JUnit.Zadatak2Test" />
-        <item itemvalue="JUnit.PripremaTest" />
         <item itemvalue="JUnit.Zadatak1Test" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PripremaTest.otpustanjeVozaca" />
+        <item itemvalue="JUnit.Zadatak2Test (1)" />
+        <item itemvalue="JUnit.PripremaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +374,10 @@
       <workItem from="1558087412742" duration="2096000" />
       <workItem from="1558163792862" duration="2412000" />
       <workItem from="1558193520694" duration="36000" />
-      <workItem from="1558335579093" duration="1573000" />
+      <workItem from="1558335579093" duration="1654000" />
+      <workItem from="1558359154161" duration="1609000" />
+      <workItem from="1558371012917" duration="3211000" />
+      <workItem from="1558440106810" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Priprema za tut">
       <created>1557663453148</created>
@@ -425,49 +442,56 @@
       <option name="project" value="LOCAL" />
       <updated>1558165873346</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Rjesen problem bacanja nepotrebnom izuzetka za zadatak2">
+      <created>1558337215714</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1558337215714</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PripremaTest - 2019.05.17 at 12h 10m 27s.xml">
-      <configuration name="PripremaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Zadatak2Test - 2019.05.17 at 12h 25m 09s.xml">
+    <history-entry file="Zadatak2Test - 2019.05.20 at 19h 12m 11s.xml">
       <configuration name="Zadatak2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Zadatak2Test - 2019.05.17 at 12h 47m 28s.xml">
+    <history-entry file="Zadatak2Test - 2019.05.20 at 19h 15m 54s.xml">
       <configuration name="Zadatak2Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Zadatak1Test - 2019.05.17 at 12h 52m 09s.xml">
+    <history-entry file="Zadatak2Test - 2019.05.20 at 19h 20m 47s.xml">
+      <configuration name="Zadatak2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Zadatak2Test - 2019.05.20 at 19h 23m 26s.xml">
+      <configuration name="Zadatak2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Zadatak2Test_(1) - 2019.05.20 at 19h 29m 44s.xml">
+      <configuration name="Zadatak2Test (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Zadatak2Test - 2019.05.20 at 19h 39m 10s.xml">
+      <configuration name="Zadatak2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Zadatak1Test - 2019.05.20 at 19h 42m 58s.xml">
       <configuration name="Zadatak1Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Zadatak1Test - 2019.05.17 at 12h 52m 51s.xml">
+    <history-entry file="Zadatak1Test - 2019.05.21 at 14h 02m 06s.xml">
       <configuration name="Zadatak1Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Zadatak1Test - 2019.05.18 at 09h 49m 33s.xml">
-      <configuration name="Zadatak1Test" configurationId="JUnit" />
+    <history-entry file="All_in_Tutorijal_8 - 2019.05.21 at 14h 02m 18s.xml">
+      <configuration name="All in Tutorijal_8" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PripremaTest - 2019.05.18 at 09h 50m 10s.xml">
-      <configuration name="PripremaTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Zadatak2Test - 2019.05.20 at 09h 04m 47s.xml">
-      <configuration name="Zadatak2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Zadatak2Test - 2019.05.20 at 09h 06m 14s.xml">
-      <configuration name="Zadatak2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Zadatak2Test - 2019.05.20 at 09h 25m 08s.xml">
+    <history-entry file="Zadatak2Test - 2019.05.21 at 14h 03m 21s.xml">
       <configuration name="Zadatak2Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50774000" />
+    <option name="totallyTimeSpent" value="55973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22751679" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1409396" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -477,7 +501,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5056657" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6359773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -494,7 +518,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" weight="0.3295302" />
-      <window_info anchor="right" id="Database" order="5" weight="0.2080537" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.2080537" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
@@ -544,7 +568,8 @@
     <MESSAGE value="Uradjen zadatak 1" />
     <MESSAGE value="Pobaoljsanje metode dodjeliVozaca" />
     <MESSAGE value="Prolaze svi testovi pripreme i zadatka 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prolaze svi testovi pripreme i zadatka 1" />
+    <MESSAGE value="Rjesen problem bacanja nepotrebnom izuzetka za zadatak2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rjesen problem bacanja nepotrebnom izuzetka za zadatak2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -592,20 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Baza.db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://edb25c5b-606a-4840-bf16-40dc5c82ca5e/schema/main/table/Vozac">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak1Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -623,58 +634,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-168">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://edb25c5b-606a-4840-bf16-40dc5c82ca5e/schema/main/table/Bus">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://edb25c5b-606a-4840-bf16-40dc5c82ca5e/schema/main/table/VozaciBuseva">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://edb25c5b-606a-4840-bf16-40dc5c82ca5e/schema/main/table/Vozac">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+        <state relative-caret-position="1197">
+          <caret line="83" column="98" selection-start-line="83" selection-start-column="98" selection-end-line="83" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1840#1841#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Bus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="1596">
           <caret line="104" column="6" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
           <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ba/unsa/etf/rs/tutorijal8/Zadatak2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="69">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rs/tutorijal8/TransportDAO.java">
+    <entry file="file://$PROJECT_DIR$/Baza.db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-593">
-          <caret line="58" column="96" selection-start-line="58" selection-start-column="96" selection-end-line="58" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Driver {
-    private int id;
+    private Integer id;
     private String Ime;
     private String Prezime;
     private String JMB;

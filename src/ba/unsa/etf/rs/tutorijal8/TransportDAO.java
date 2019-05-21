@@ -56,7 +56,7 @@ public class TransportDAO {
 
             getDodjelaVozaci = conn.prepareStatement("SELECT DISTINCT v.vozac_id, v.ime, v.prezime, v.JMB, v.datum_rodjenja, v.datum_zaposljenja" +
                     " FROM VozaciBuseva vd , Vozac v WHERE vd.driverId = v.vozac_id AND vd.busId=?");
-            dodajVouzacaBusa = conn.prepareStatement("INSERT INTO VozaciBuseva VALUES (?,?,null )");
+            dodajVouzacaBusa = conn.prepareStatement("INSERT INTO VozaciBuseva VALUES (?,?,null)");
 
         } catch (SQLException e) {
             regenerisiBazu();
@@ -71,7 +71,7 @@ public class TransportDAO {
             String sqlUpit = "";
             while (ulaz.hasNext()){
                 sqlUpit += ulaz.nextLine();
-                if (sqlUpit.charAt(sqlUpit.length() - 1 ) == ';'){
+                if (sqlUpit.charAt(sqlUpit.length() - 1 ) == ';' ){
                     try {
                         Statement stmt = conn.createStatement();
                         stmt.execute(sqlUpit);
@@ -86,6 +86,122 @@ public class TransportDAO {
         }
         ulaz.close();
     }
+
+    public ArrayList<Driver> getDrivers() {
+        ArrayList<Driver> drivers = new ArrayList<Driver>();
+        ResultSet result = null;
+        try {
+            result = dajVozaceUpit.executeQuery();
+            Driver driver;
+            while (  ( driver = dajVozaceUpit(result) ) != null )
+                drivers.add(driver);
+            result.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return drivers;
+    }
+
+    public LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
+        return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
+    }
+    private Driver dajVozaceUpit(ResultSet result) {
+        Driver driver = null;
+        try {
+            if (result.next() ){
+                int id = result.getInt("vozac_id");
+                String name = result.getString("ime");
+                String surname = result.getString("prezime");
+                String jmb = result.getString("JMB");
+                LocalDate rodjendan = convertToLocalDateViaSqlDate(result.getDate("datum_rodjenja"));
+                LocalDate datum_zap = convertToLocalDateViaSqlDate(result.getDate("datum_zaposljenja"));
+
+                driver = new Driver( name , surname , jmb , rodjendan , datum_zap);
+                driver.setId(id);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return driver;
+    }
+
+    public ArrayList<Bus> getBusses() {
+        ArrayList<Bus> buses = new ArrayList<>();
+        try {
+            ResultSet result = dajBusUpit.executeQuery();
+            while(result.next()) {
+                Integer id = result.getInt(1);
+                String maker = result.getString(2);
+                String series = result.getString(3);
+                int brojSjedista = result.getInt(4);
+                getDodjelaVozaci.setInt(1, id);
+
+                ResultSet ResultatDrugi = getDodjelaVozaci.executeQuery();
+                Driver driver;
+                ArrayList<Driver> drivers = new ArrayList<Driver>();
+                while (ResultatDrugi.next()) {
+                    Integer id_drivera = ResultatDrugi.getInt(1);
+                    String name = ResultatDrugi.getString(2);
+                    String surname = ResultatDrugi.getString(3);
+                    String jmb = ResultatDrugi.getString(4);
+                    Date birthDate = ResultatDrugi.getDate(5);
+                    Date hireDate = ResultatDrugi.getDate(6);
+                    drivers.add(new Driver(id_drivera, name, surname, jmb, birthDate.toLocalDate(), hireDate.toLocalDate()));
+                    //System.out.println("size:" + drivers.size());
+                }
+                if (drivers.size() == 1) {
+                    buses.add(new Bus(id, maker, series, brojSjedista, drivers.get(0), null));
+                }
+                else if (drivers.size() == 2) {
+                    buses.add(new Bus(id, maker, series, brojSjedista, drivers.get(0), drivers.get(1)));
+                }
+                else {
+                    buses.add(new Bus(id, maker, series, brojSjedista, null, null));
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return buses;
+
+    }
+
+
+/*
+    public ArrayList<Bus> getBusses() {
+        ArrayList<Bus> busevi = new ArrayList<Bus>();
+        ResultSet result = null;
+        try {
+            result = dajBusUpit.executeQuery();
+            Bus bus;
+            while ( ( bus = dajBusUpit(result) ) != null )
+                busevi.add(bus);
+            result.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return busevi;
+    }
+
+    private Bus dajBusUpit(ResultSet result) {
+        Bus bus = null;
+        try {
+            if (result.next() ){
+                int id = result.getInt("bus_id");
+                String proizvodjac = result.getString("proizvodjac");
+                String serija = result.getString("serija");
+                int brojSjedista = result.getInt("broj_sjedista");
+
+                bus = new Bus( id , proizvodjac , serija , brojSjedista , null , null );
+                bus.setId(id);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return bus;
+    }
+*/
 
     public Date convertToDateViaSqlDate(LocalDate dateToConvert) {
         return java.sql.Date.valueOf(dateToConvert);
@@ -126,101 +242,6 @@ public class TransportDAO {
             e.printStackTrace();
         }
     }
-
-    public ArrayList<Driver> getDrivers() {
-        ArrayList<Driver> drivers = new ArrayList<Driver>();
-        ResultSet result = null;
-        try {
-            result = dajVozaceUpit.executeQuery();
-            Driver driver;
-            while (  ( driver = dajVozaceUpit(result) ) != null )
-                drivers.add(driver);
-            result.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return drivers;
-    }
-
-    public ArrayList<Bus> getBusses() {
-        ArrayList<Bus> busevi = new ArrayList<Bus>();
-        ResultSet result = null;
-        try {
-            result = dajBusUpit.executeQuery();
-            Bus bus;
-            while ( ( bus = dajBusUpit(result) ) != null )
-                busevi.add(bus);
-            result.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return busevi;
-    }
-
-    public LocalDate convertToLocalDateViaSqlDate(Date dateToConvert) {
-        return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
-    }
-    private Driver dajVozaceUpit(ResultSet result) {
-        Driver driver = null;
-        try {
-            if (result.next() ){
-                int id = result.getInt("vozac_id");
-                String name = result.getString("ime");
-                String surname = result.getString("prezime");
-                String jmb = result.getString("JMB");
-                LocalDate rodjendan = convertToLocalDateViaSqlDate(result.getDate("datum_rodjenja"));
-                LocalDate datum_zap = convertToLocalDateViaSqlDate(result.getDate("datum_zaposljenja"));
-
-                driver = new Driver( name , surname , jmb , rodjendan , datum_zap);
-                driver.setId(id);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return driver;
-    }
-
-
-    private Bus dajBusUpit(ResultSet result) {
-        Bus bus = null;
-        try {
-            if (result.next() ){
-                int id = result.getInt("bus_id");
-                String proizvodjac = result.getString("proizvodjac");
-                String serija = result.getString("serija");
-                int brojSjedista = result.getInt("broj_sjedista");
-               // getDodjelaVozaci.setInt(1,id);
-
-                bus = new Bus( proizvodjac , serija , brojSjedista);
-                bus.setId(id);
-/*                ResultSet result2 = getDodjelaVozaci.executeQuery();
-                Driver v1;
-                ArrayList<Driver> drivers = new ArrayList<Driver>();
-                while (result2.next()) {
-                    Integer idDriver = result2.getInt(1);
-                    String name = result2.getString(2);
-                    String surname = result2.getString(3);
-                    String jmb = result2.getString(4);
-                    Date birthDate = result2.getDate(5);
-                    Date hireDate = result2.getDate(5);
-                    drivers.add(new Driver(idDriver, name, surname, jmb, birthDate.toLocalDate(), hireDate.toLocalDate()));
-                    System.out.println("size:" + drivers.size());
-                }
-                if (drivers.size() == 1)
-                    bus = new Bus(id, proizvodjac, serija, brojSjedista, drivers.get(0), null);
-
-                else if (drivers.size() == 2)
-                    bus=new Bus(id, proizvodjac, serija, brojSjedista, drivers.get(0), drivers.get(1));
-
-                else bus=new Bus(id, proizvodjac, serija, brojSjedista, null, null);
-  */
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return bus;
-    }
-
 
     public void deleteBus(Bus bus) {
         try {
