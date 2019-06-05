@@ -87,8 +87,8 @@ public class TransportDAO {
             addDriver.setString(2, driver.getName());
             addDriver.setString(3, driver.getPrezime());
             addDriver.setString(4 , driver.getJMB());
-            addDriver.setDate(5 , convertToDateViaSqlDate(driver.getBirthday()));
-            addDriver.setDate(6 , convertToDateViaSqlDate(driver.getWorkDate()));
+            addDriver.setDate(5 , Date.valueOf((driver.getBirthday())));
+            addDriver.setDate(6 , Date.valueOf((driver.getWorkDate())));
             addDriver.executeUpdate();
         } catch (SQLException e) {
             throw new IllegalArgumentException("Taj vozač već postoji!");
@@ -209,11 +209,6 @@ public class TransportDAO {
             e.printStackTrace();
         }
         return bus;
-    }
-
-
-    public Date convertToDateViaSqlDate(LocalDate dateToConvert) {
-        return java.sql.Date.valueOf(dateToConvert);
     }
 
 
