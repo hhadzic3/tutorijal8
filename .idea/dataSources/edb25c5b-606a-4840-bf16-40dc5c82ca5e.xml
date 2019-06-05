@@ -20,6 +20,7 @@
     <column id="10" parent="6" name="bus_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="11" parent="6" name="proizvodjac">
       <Position>2</Position>
@@ -33,90 +34,86 @@
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="14" parent="6" name="broj_vozaca">
-      <Position>5</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <key id="15" parent="6">
+    <key id="14" parent="6">
       <ColNames>bus_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="16" parent="7" name="vozac_id">
+    <column id="15" parent="7" name="vozac_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="17" parent="7" name="ime">
+    <column id="16" parent="7" name="ime">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="18" parent="7" name="prezime">
+    <column id="17" parent="7" name="prezime">
       <Position>3</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="19" parent="7" name="JMB">
+    <column id="18" parent="7" name="JMB">
       <Position>4</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="20" parent="7" name="datum_rodjenja">
+    <column id="19" parent="7" name="datum_rodjenja">
       <Position>5</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="21" parent="7" name="datum_zaposljenja">
+    <column id="20" parent="7" name="datum_zaposljenja">
       <Position>6</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <index id="22" parent="7" name="Vozac_JMB_uindex">
+    <index id="21" parent="7" name="Vozac_JMB_uindex">
       <ColNames>JMB</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="23" parent="7">
+    <key id="22" parent="7">
       <ColNames>vozac_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="24" parent="8" name="driverId">
+    <column id="23" parent="8" name="driverId">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="25" parent="8" name="busId">
+    <column id="24" parent="8" name="busId">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="26" parent="8" name="VozaciBuseva_id">
+    <column id="25" parent="8" name="VozaciBuseva_id">
       <Position>3</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <key id="27" parent="8">
+    <key id="26" parent="8">
       <ColNames>VozaciBuseva_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="28" parent="8">
+    <foreign-key id="27" parent="8">
       <ColNames>driverId</ColNames>
       <RefTableName>Vozac</RefTableName>
       <RefColNames>vozac_id</RefColNames>
     </foreign-key>
-    <foreign-key id="29" parent="8">
+    <foreign-key id="28" parent="8">
       <ColNames>busId</ColNames>
       <RefTableName>Bus</RefTableName>
       <RefColNames>bus_id</RefColNames>
     </foreign-key>
-    <column id="30" parent="9" name="type">
+    <column id="29" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="31" parent="9" name="name">
+    <column id="30" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="32" parent="9" name="tbl_name">
+    <column id="31" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="33" parent="9" name="rootpage">
+    <column id="32" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="34" parent="9" name="sql">
+    <column id="33" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>

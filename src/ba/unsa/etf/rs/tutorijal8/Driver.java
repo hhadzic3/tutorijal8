@@ -83,8 +83,11 @@ public class Driver {
     public String toString() {
         return  " - (" + this.getName() + " " + this.getPrezime() + " ( " + this.getJMB() + " ))";
     }
-
-    public boolean equals(Driver d) {
-        return (d.getJMB().equals(this.getJMB()));
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Driver)) return false;
+        Driver driver = (Driver) o;
+        return Objects.equals(getJMB(), driver.getJMB());
     }
 }
