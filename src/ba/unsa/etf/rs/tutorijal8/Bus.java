@@ -5,16 +5,15 @@ public class Bus {
     private String proizvodjac;
     private String serija;
     private int numberOfSeats;
-    private int numberOfDrivers;
-    private Driver FirstDriver = null;
-    private Driver SecondDriver = null;
+    private Driver driverOne = null;
+    private Driver driverTwo = null;
 
-    public void setFirstDriver(Driver firstDriver) {
-        FirstDriver = firstDriver;
+    public void setDriverOne(Driver driverOne) {
+        this.driverOne = driverOne;
     }
 
-    public void setSecondDriver(Driver secondDriver) {
-        SecondDriver = secondDriver;
+    public void setDriverTwo(Driver driverTwo) {
+        this.driverTwo = driverTwo;
     }
 
     public Bus(){ }
@@ -32,14 +31,13 @@ public class Bus {
         this.numberOfSeats = numberOfSeats;
 
     }
-   public Bus(int Id, String proizvodjac, String serija, int numberOfSeats, Driver firstDriver, Driver secondDriver) {
+   public Bus(int Id, String proizvodjac, String serija, int numberOfSeats, Driver driverOne, Driver driverTwo) {
         id = Id;
         this.proizvodjac = proizvodjac;
         this.serija = serija;
         this.numberOfSeats = numberOfSeats;
-
-        FirstDriver = firstDriver;
-        SecondDriver = secondDriver;
+        this.driverOne = driverOne;
+        this.driverTwo = driverTwo;
     }
 
     public int getId() {
@@ -74,40 +72,26 @@ public class Bus {
         this.numberOfSeats = numberOfSeats;
     }
 
-    public int getNumberOfDrivers() {
-        return numberOfDrivers;
-    }
-
-    public void setNumberOfDrivers(int numberOfDrivers) {
-        this.numberOfDrivers = numberOfDrivers;
-    }
-
     public Driver getDriverOne() {
-       return FirstDriver;
+       return driverOne;
     }
 
     public Driver getDriverTwo() {
-        return SecondDriver;
+        return driverTwo;
     }
 
     @Override
     public String toString () {
         String s = "";
         s += this.proizvodjac + " " + this.serija + " ( seats: " + this.getSeatNumber() + " )";
-        if (FirstDriver != null) {
-            s += FirstDriver.toString();
+        if (driverOne != null) {
+            s += driverOne.toString();
         }
-        if (SecondDriver != null) {
-            s += SecondDriver.toString();
+        if (driverTwo != null) {
+            s += driverTwo.toString();
         }
         return s;
     }
-    /*public boolean equals(Bus bus) {
-        if (id != null) {
-            return (bus.getId().equals(this.getId()));
-        }
-        return false;
-    }*/
 
 }
 
