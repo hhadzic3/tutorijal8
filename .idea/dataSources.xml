@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Baza" uuid="edb25c5b-606a-4840-bf16-40dc5c82ca5e">
+    <data-source source="LOCAL" name="baza" uuid="395bddc5-c205-4bdf-bc4d-a886f1d171b7">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\HARUN\AppData\Local\Temp\tutorijal8\Baza.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="baza_pomocna" uuid="68b641a1-ff2a-4b9c-83a3-b3f9a76cad2f">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\HARUN\AppData\Local\Temp\tutorijal8\baza_pomocna.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\HARUN\AppData\Local\Temp\tutorijal8\baza.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

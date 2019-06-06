@@ -17,86 +17,91 @@
     <table id="9" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="10" parent="6" name="bus_id">
+    <table id="10" parent="2" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="11" parent="6" name="bus_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="11" parent="6" name="proizvodjac">
+    <column id="12" parent="6" name="proizvodjac">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="12" parent="6" name="serija">
+    <column id="13" parent="6" name="serija">
       <Position>3</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="13" parent="6" name="broj_sjedista">
+    <column id="14" parent="6" name="broj_sjedista">
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <key id="14" parent="6">
+    <key id="15" parent="6">
       <ColNames>bus_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="15" parent="7" name="vozac_id">
+    <column id="16" parent="7" name="vozac_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="16" parent="7" name="ime">
+    <column id="17" parent="7" name="ime">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="17" parent="7" name="prezime">
+    <column id="18" parent="7" name="prezime">
       <Position>3</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="18" parent="7" name="JMB">
+    <column id="19" parent="7" name="JMB">
       <Position>4</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="19" parent="7" name="datum_rodjenja">
+    <column id="20" parent="7" name="datum_rodjenja">
       <Position>5</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="20" parent="7" name="datum_zaposljenja">
+    <column id="21" parent="7" name="datum_zaposljenja">
       <Position>6</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <index id="21" parent="7" name="Vozac_JMB_uindex">
+    <index id="22" parent="7" name="Vozac_vozac_id_uindex">
+      <ColNames>vozac_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="23" parent="7" name="Vozac_JMB_uindex">
       <ColNames>JMB</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="22" parent="7">
+    <key id="24" parent="7">
       <ColNames>vozac_id</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexName>Vozac_vozac_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="23" parent="8" name="driverId">
+    <column id="25" parent="8" name="driverId">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="24" parent="8" name="busId">
+    <column id="26" parent="8" name="busId">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="25" parent="8" name="VozaciBuseva_id">
-      <Position>3</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <key id="26" parent="8">
-      <ColNames>VozaciBuseva_id</ColNames>
+    <index id="27" parent="8" name="sqlite_autoindex_VozaciBuseva_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>driverId
+busId</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="8" name="VozaciBuseva_pk">
+      <ColNames>driverId
+busId</ColNames>
       <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_VozaciBuseva_1</UnderlyingIndexName>
     </key>
-    <foreign-key id="27" parent="8">
-      <ColNames>driverId</ColNames>
-      <RefTableName>Vozac</RefTableName>
-      <RefColNames>vozac_id</RefColNames>
-    </foreign-key>
-    <foreign-key id="28" parent="8">
-      <ColNames>busId</ColNames>
-      <RefTableName>Bus</RefTableName>
-      <RefColNames>bus_id</RefColNames>
-    </foreign-key>
     <column id="29" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
@@ -116,6 +121,12 @@
     <column id="33" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
+    </column>
+    <column id="34" parent="10" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="35" parent="10" name="seq">
+      <Position>2</Position>
     </column>
   </database-model>
 </dataSource>
