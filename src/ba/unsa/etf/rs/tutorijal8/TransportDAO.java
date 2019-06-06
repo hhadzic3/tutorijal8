@@ -58,27 +58,6 @@ public class TransportDAO {
     }
 
 
-    public void addDriver(String name, String surname, int jmb, LocalDate dateOfBirth, LocalDate hireDate) {
-        try {
-            ResultSet result = odrediIdDriveraUpit.executeQuery();
-            result.next();
-            Integer id = result.getInt(1);
-            if (id == null) {
-                id = 1;
-            }
-            addDriver.setInt(1, id);
-            addDriver.setString(2, name);
-            addDriver.setString(3, surname);
-            addDriver.setInt(4, jmb);
-            addDriver.setDate(5, Date.valueOf(dateOfBirth));
-            addDriver.setDate(6, Date.valueOf(hireDate));
-            addDriver.executeUpdate();
-
-        } catch (SQLException e) {
-            throw new IllegalArgumentException();
-        }
-    }
-
     public void addDriver(Driver driver){
         ArrayList<Driver> drivers = getDrivers();
         if(drivers.contains(driver)) throw new IllegalArgumentException("Taj vozač već postoji!");
@@ -156,22 +135,20 @@ public class TransportDAO {
                     Date hireDate = ResultatDrugi.getDate(6);
                     drivers.add(new Driver(id_drivera, name, surname, jmb, birthDate.toLocalDate(), hireDate.toLocalDate()));
                 }
-                if (drivers.size() == 1) {
+                if (drivers.size() == 1)
                     buses.add(new Bus(id, maker, series, brojSjedista, drivers.get(0), null));
-                }
-                else if (drivers.size() == 2) {
+
+                else if (drivers.size() == 2)
                     buses.add(new Bus(id, maker, series, brojSjedista, drivers.get(0), drivers.get(1)));
-                }
-                else {
+
+                else
                     buses.add(new Bus(id, maker, series, brojSjedista, null, null));
-                }
 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return buses;
-
     }
 
     private Driver dajVozaceUpit(ResultSet result) {
@@ -194,46 +171,7 @@ public class TransportDAO {
         return driver;
     }
 
-    private Bus dajBusUpit(ResultSet result) {
-        Bus bus = null;
-        try {
-            if (result.next() ){
-                int id = result.getInt("bus_id");
-                String proizvodjac = result.getString("proizvodjac");
-                String serija = result.getString("serija");
-                int brojSjedista = result.getInt("broj_sjedista");
-                getDodjelaVozaci.setInt(1,id);
-
-                bus = new Bus( proizvodjac , serija , brojSjedista);
-                bus.setId(id);
-
-                ResultSet result2 = getDodjelaVozaci.executeQuery();
-                Driver v1;
-                ArrayList<Driver> drivers = new ArrayList<Driver>();
-                while (result2.next()) {
-                    Integer idDriver = result2.getInt(1);
-                    String name = result2.getString(2);
-                    String surname = result2.getString(3);
-                    String jmb = result2.getString(4);
-                    Date birthDate = result2.getDate(5);
-                    Date hireDate = result2.getDate(5);
-                    drivers.add(new Driver(idDriver, name, surname, jmb, birthDate.toLocalDate(), hireDate.toLocalDate()));
-                    System.out.println("size:" + drivers.size());
-                }
-                if (drivers.size() == 1)
-                    bus = new Bus(id, proizvodjac, serija, brojSjedista, drivers.get(0), null);
-                else if (drivers.size() == 2)
-                    bus=new Bus(id, proizvodjac, serija, brojSjedista, drivers.get(0), drivers.get(1));
-                else bus=new Bus(id, proizvodjac, serija, brojSjedista, null, null);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return bus;
-    }
-
-
-    public void deleteBus(Bus bus) {
+   public void deleteBus(Bus bus) {
         try {
             obrisiDodjelaBus.setInt(1, bus.getId());
             obrisiDodjelaBus.executeUpdate();
